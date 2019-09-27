@@ -66,7 +66,7 @@ We assume all passengers are coming back to the same airport they left.
 
 The responses differ between providers.
 
-#### Air Moon
+#### Air Jazz
 
 Air Moon response format follows schema:
 
