@@ -20,7 +20,7 @@ Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui s
 | Barnsley     | 30 minutes       |
 | Hounslow     | 60 minutes       |
 
-Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, à savoir 15 minutes et les bornes de chaque intervalle de mesure sont toujours multiples de 15min, et ces centrales sont dans la même timezone. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
+Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, et toutes les centrales sont dans la même timezone. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
 
 Le chapitre suivant donne plus d’indications sur chacune des centrales.
 
