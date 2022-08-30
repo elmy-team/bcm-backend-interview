@@ -20,7 +20,7 @@ Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui s
 | Barnsley     | 30 minutes       |
 | Hounslow     | 60 minutes       |
 
-Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, à savoir 15 minutes. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
+Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, à savoir 15 minutes et les bornes de chaque intervalle de mesure sont toujours multiples de 15min, et ces centrales sont dans la même timezone. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
 
 Le chapitre suivant donne plus d’indications sur chacune des centrales.
 
@@ -51,23 +51,23 @@ Query Params:
     
     [
        {
-          "start":1577833200,
-          "end":1577833200,
+          "start":1578006000,
+          "end":1578007800,
           "power":710
        },
        {
-          "start":1577834100,
-          "end":1577834101,
+          "start":1578007800,
+          "end":1578009600,
           "power":627
        },
        {
-          "start":1577884500,
-          "end":1577884557,
+          "start":1578009600,
+          "end":1578011400,
           "power":518
        },
        {
-          "start":1578177900,
-          "end":1578178283,
+          "start":1578011400,
+          "end":1578013200,
           "power":750
        },
        ...
@@ -91,18 +91,18 @@ Query Params:
     
     [
        {
-          "start_time":1577833200,
-          "end_time":1577833200,
+          "start_time":1579129200,
+          "end_time":1579131000,
           "value":774
        },
        {
-          "start_time":1577834100,
-          "end_time":1577834101,
+          "start_time":1579131000,
+          "end_time":1579132800,
           "value":682
        },
        {
-          "start_time":1578177900,
-          "end_time":1578178283,
+          "start_time":1579134600,
+          "end_time":1579136400,
           "value":622
        },
        ...
@@ -125,9 +125,9 @@ Query Params:
     curl https://interview.beta.bcmenergy.fr/hounslow?from=01-01-2020&to=05-01-2020
     
     debut,fin,valeur
-    1577833200,1577833200,568
-    1577834100,1577834101,770
-    1578175200,1578175580,754
+    1577871000,1577874600,568
+    1577874600,1577878200,770
+    1578178200,1578181800,754
     
 
 
@@ -157,13 +157,13 @@ Même si le format est libre, voici une possibilité de réponse au format json
 
     [
        {
-          "start":"1607826957",
-          "end":"1607827857",
+          "start":"1577834100",
+          "end":"1577835000",
           "power":993
        },
        {
-          "start":"1583254179",
-          "end":"1583255079",
+          "start":"1577835000",
+          "end":"1577835900",
           "power":1057
        },
     ...
