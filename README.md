@@ -160,13 +160,11 @@ Même si le format est libre, voici une possibilité de réponse au format json
           "start":"1578006000",
           "end":"1578006900",
           "power":2052,
-          "power":993
        },
        {
           "start":"1578006900",
           "end":"1578007800",
           "power":1969
-          "power":1057
        },
     ...
     ]
