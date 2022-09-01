@@ -91,18 +91,18 @@ Query Params:
     
     [
        {
-          "start_time":1579129200,
-          "end_time":1579131000,
+          "start_time":1578006000,
+          "end_time":1578007800,
           "value":774
        },
        {
-          "start_time":1579131000,
-          "end_time":1579132800,
+          "start_time":1578007800,
+          "end_time":1578009600,
           "value":682
        },
        {
-          "start_time":1579134600,
-          "end_time":1579136400,
+          "start_time":1578009600,
+          "end_time":1578011400,
           "value":622
        },
        ...
