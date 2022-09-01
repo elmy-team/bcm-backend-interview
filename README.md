@@ -157,8 +157,9 @@ Même si le format est libre, voici une possibilité de réponse au format json
 
     [
        {
-          "start":"1577834100",
-          "end":"1577835000",
+          "start":"1578006000",
+          "end":"1578006900",
+          "power":2052,
           "power":993
        },
        {
