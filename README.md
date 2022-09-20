@@ -20,7 +20,7 @@ Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui s
 | Barnsley     | 30 minutes       |
 | Hounslow     | 60 minutes       |
 
-Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, et toutes les centrales sont dans la même timezone. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
+Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, et toutes les centrales sont dans la même timezone. C’est bien ici la **somme** des puissances des centrales qui nous intéresse comme fonction d’agrégation.
 
 Le chapitre suivant donne plus d’indications sur chacune des centrales.
 
@@ -170,7 +170,10 @@ Même si le format est libre, voici une possibilité de réponse au format json
     ]
     
 
-
+## Notes
+Attention: puissance =/= énergie.
+Pour un changement de pas horaire, la puissance reste la même contrairement à une énergie qui serait divisée.
+Ex: 10 Watt sur 20 minutes = 10 Watt sur 10 minutes et 10 Watt sur les 10 minutes suivantes.
 
 ## Contraintes
 
