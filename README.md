@@ -1,18 +1,18 @@
 # Objectif
 
-L’objectif de cet exercice est de créer une application standalone qui récupère et agrège des données de productions de centrales électriques. On cherche à obtenir la somme des données de chaque centrale au pas de temps 15 min.
+L’objectif de cet exercice est de créer une application standalone qui récupère et agrège des données de productions de centrales électriques. On cherche à obtenir la somme des puissances de chaque centrale au pas de temps 15 min.
 
 **Nous regarderons le code de la même façon que nous regarderions un code de production.**
 
 # Contexte
 
-Pour cet exercice, nous nous plaçons dans le contexte suivant: nous avons trois centrales de production d'énergie qui sont : 
+Pour cet exercice, nous nous plaçons dans le contexte suivant: nous avons trois centrales de production d'énergie qui sont :
 
 - Hawes
 - Barnsley 
 - Hounslow 
 
-Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui sont en capacité de remonter des informations basiques de production d’électricité : ici, nous nous intéressons uniquement à la puissance de production sur un pas de temps donné. Le pas de temps de mesure est toujours constant, mais diffère pour chaque centrale:
+Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui sont en capacité de remonter des informations basiques de production d’électricité : ici, nous nous intéressons uniquement à la **puissance** de production sur un pas de temps donné. Le pas de temps de mesure est toujours constant, mais diffère pour chaque centrale:
 
 | **Centrale** | **Pas de temps** |
 | ------------ | ---------------- |
@@ -20,14 +20,14 @@ Sur chacune de ces centrales, nous avons des infrastructures de monitoring qui s
 | Barnsley     | 30 minutes       |
 | Hounslow     | 60 minutes       |
 
-Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, et toutes les centrales sont dans la même timezone. C’est bien ici la **somme** qui nous intéresse comme fonction d’agrégation.
+Nous sommes seulement intéressés par la somme de ces puissances de production. Pour faciliter l’exercice, la somme de ces mesures par pas de temps se cale sur le plus petit de nos centrales, et toutes les centrales sont dans la même timezone. C’est bien ici la **somme** des puissances des centrales qui nous intéresse comme fonction d’agrégation.
 
 Le chapitre suivant donne plus d’indications sur chacune des centrales.
 
 
 # Centrales
 
-Comme vous pourrez le voir dans la description de chaque centrale, les formats peuvent être différents. Chaque réponse contient pour chaque intervalle de temps, la valeur mesurée sur le site de production.
+Comme vous pourrez le voir dans la description de chaque centrale, les formats peuvent être différents. Chaque réponse contient pour chaque intervalle de temps, la valeur de la puissance mesurée sur le site de production.
 
 Chaque centrale dispose d’une API permettant la récupération des données enregistrées sur le site. Chaque API prend deux paramètres: `from` et `to`.  `from` correspond au point de départ de la remontée d’informations, `to` étant le point final.
 
@@ -170,7 +170,10 @@ Même si le format est libre, voici une possibilité de réponse au format json
     ]
     
 
-
+## Notes
+Attention: puissance =/= énergie.
+Pour un changement de pas horaire, la puissance reste la même contrairement à une énergie qui serait divisée.
+Ex: 10 Watt sur 20 minutes = 10 Watt sur 10 minutes et 10 Watt sur les 10 minutes suivantes.
 
 ## Contraintes
 
